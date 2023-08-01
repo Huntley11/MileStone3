@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./cssFiles/Popup.css"
+import "./cssFiles/Popup.css"
 import Button from "react-bootstrap/Button";
 
 function Popup (props) {

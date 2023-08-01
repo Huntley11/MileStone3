@@ -9,6 +9,7 @@ function HomePage() {
             <Navigation/>
             <div className="body">
                 <Appointment />
+                <img src="./images/midnightPurpleWrapRoll.webp" alt="car wrap" height="400px" width="400px"/>
             </div>
         </div>
             
