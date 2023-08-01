@@ -5,11 +5,17 @@ import Appointment from "./Appointment";
 function HomePage() {
     return (
         <div>
-            <h1>Car Wraps R US</h1>
             <Navigation/>
             <div className="body">
                 <Appointment />
-                <img src="./images/midnightPurpleWrapRoll.webp" alt="car wrap" height="400px" width="400px"/>
+                <div>
+                    <img src="./images/midnightPurpleWrapRoll.webp" alt="Car wrap roll purple" height="200px" width="200px"/>
+                    <img src="./images/blackWrapRoll.webp" alt="Car wrap roll black" height="200px" width="200px"/>
+                    <img src="./images/blueWrapRoll.webp" alt="Car wrap roll" height="200px" width="200px"/>
+                    <img src="./images/greenWrapRoll.webp" alt="Car wrap roll" height="200px" width="200px"/>
+                    <img src="./images/redWrapRoll.webp" alt="Car wrap roll" height="200px" width="200px"/>
+                    <img src="./images/roseGoldWrapRoll.webp" alt="Car wrap roll" height="200px" width="200px"/>
+                </div>
             </div>
         </div>
             

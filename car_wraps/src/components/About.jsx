@@ -21,7 +21,6 @@ function About () {
                 <p>At Car Wraps R-Us, our vision is to be recognized as the premier car wrapping and detailing company, admired for our unparalleled creativity, exceptional craftsmanship, and dedication to customer satisfaction. By consistently raising the bar and setting new industry standards, we aim to leave a lasting mark on the automotive world and the hearts of car enthusiasts everywhere.</p>
                 <br/>
                 <p>Join us on this journey to elevate your vehicle to new heights of beauty and distinction. Together, we'll turn your driving experience into an unforgettable expression of style and elegance, as we continue to make the roads more vibrant, one car at a time.</p>
-
             </div>
         </div>
     </section>

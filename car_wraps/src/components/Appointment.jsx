@@ -28,7 +28,7 @@ function Appointment () {
         </Button>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
             <form onSubmit={handleSubmit}>
-                <h3>Schedule Appointment Now</h3>
+                <h3>Free Estimate</h3>
                 <label>First Name</label>
                 <br />
                     <input
