@@ -1,0 +1,59 @@
+/* Existing styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+  
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+}
+  
+.navbar a:hover {
+    background-color: #ddd;
+}
+  
+  /* New styles for the hamburger menu */
+.hamburger {
+    
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+  
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px;
+}
+  
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+  /* Media query for responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        align-items: right;
+        flex-direction: column;
+    }
+  
+    .hamburger {
+        display: flex;
+    }
+  
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+  
+    .menu.active {
+        display: flex;
+    }
+}
