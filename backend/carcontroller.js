@@ -14,12 +14,19 @@ car.get(`/:id`,(req,res)=>{
     res.send(`this is the car index at /car`)
 
 })
+
+
+Router.get('./',(req,res)={
+    res.send('GET /car')
+})
+
+
 cars.get(`./:id/edit`,(req,res)=>{
     car.findById(req.params.id)
     .then(foundCar=>{
         res.render(`edit`,{
-            bread:foundCar
+            serv:foundCar
         })
     })
 }),
-module.exports=cars 
+module.exports=router
