@@ -4,6 +4,7 @@ import './Navbar.css';
 import HomePage from '../HomePage';
 import About from '../About'
 import Login from '../Login';
+import Appointment from '../Appointments';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -27,7 +28,7 @@ function Navbar() {
           <Link to="/about" onClick={handleToggleMenu}>
             About
           </Link>
-          <Link to="/appointment" onClick={handleToggleMenu}>
+          <Link to="/Appointment" onClick={handleToggleMenu}>
             Appointment
           </Link>
           <Link to="/sign-up" onClick={handleToggleMenu}>
@@ -42,8 +43,8 @@ function Navbar() {
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/about" element={<About/>} />
-        {/* <Route path="/appointment" element={Appointment} />
-        <Route path="/sign-up" element={SignUp} /> */}
+        <Route path="/Appointment" element={<Appointment/>} />
+        {/* <Route path="/sign-up" element={SignUp} /> */}
         <Route path="/login" element={<Login/>} />
       </Routes>
       

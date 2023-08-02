@@ -1,11 +1,11 @@
 import React from "react";
-import Appointment from "./Appointment";
+import FreeEstimate from "./FreeEstimate";
 
 function HomePage() {
     return (
         <div>
             <div className="body">
-                <Appointment />
+                <FreeEstimate />
                 <div className="productsContainer">
                     <div className="product">
                         <img src="./images/midnightPurpleWrapRoll.webp" alt="Car wrap roll purple" height="200px" width="200px"/>

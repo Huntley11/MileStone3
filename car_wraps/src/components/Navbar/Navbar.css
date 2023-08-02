@@ -18,7 +18,7 @@
   
   /* New styles for the hamburger menu */
 .hamburger {
-    
+    justify-content: center;
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -40,7 +40,6 @@
   /* Media query for responsive design */
 @media (max-width: 768px) {
     .navbar {
-        align-items: right;
         flex-direction: column;
     }
   

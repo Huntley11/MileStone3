@@ -3,7 +3,7 @@ import Popup from "./Popup/Popup";
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 
-function Appointment () {
+function FreeEstimate () {
     const [buttonPopup, setButtonPopup] = useState(false);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -25,9 +25,9 @@ function Appointment () {
         setButtonPopup(false);
     };
     return(
-    <section className="appointment">
+    <section className="FreeEstimate">
         <Button
-            className="createNewAppointment"
+            className="createFreeEstimate"
             onClick={() => setButtonPopup(true)}
         >
            Schedule Now
@@ -88,7 +88,7 @@ function Appointment () {
     )
 }
 
-export default Appointment
+export default FreeEstimate
 
 // car api link https://rapidapi.com/principalapis/api/car-data/
 // https://docs.rapidapi.com/docs/api-requests-overview
