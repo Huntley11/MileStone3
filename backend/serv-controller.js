@@ -21,6 +21,7 @@ serv.get(`/:id`,(req,res)=>{
     res.send(`this is the serv index at /car`)
 
 })
+serv.push()
 serv.get(`./:id/edit`,(req,res)=>{
     serv.findById(req.params.id)
     .then(foundserv=>{
