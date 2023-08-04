@@ -1,10 +1,25 @@
-/* Existing styles */
-.navbar {
+.navbar .title{
     display: flex;
     justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
     background-color: #f0f0f0;
     padding: 10px;
 }
+
+.container {
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
   
 .navbar a {
     text-decoration: none;
@@ -15,8 +30,7 @@
 .navbar a:hover {
     background-color: #ddd;
 }
-  
-  /* New styles for the hamburger menu */
+
 .hamburger {
     justify-content: center;
     display: none;
@@ -33,9 +47,13 @@
   
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
+
+
+
+
   
   /* Media query for responsive design */
 @media (max-width: 768px) {
@@ -50,6 +68,7 @@
     .menu {
         display: none;
         flex-direction: column;
+        align-items: flex-start;
     }
   
     .menu.active {

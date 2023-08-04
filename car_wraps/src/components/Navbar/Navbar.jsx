@@ -15,15 +15,16 @@ function Navbar() {
 
   return (
     <Router>
-      <div className={`navbar ${showMenu ? 'active' : ''}`}>
+      <nav className={`navbar ${showMenu ? 'active' : ''}`}>
         <div className="hamburger" onClick={handleToggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </div>
+        
         <div className={`menu ${showMenu ? 'active' : ''}`}>
           <Link to="/" onClick={handleToggleMenu}>
-            Home
+          <h1>Car Wraps R Us</h1>
           </Link>
           <Link to="/about" onClick={handleToggleMenu}>
             About
@@ -38,7 +39,7 @@ function Navbar() {
             Log In
           </Link>
         </div>
-      </div>
+      </nav>
 
       <Routes>
         <Route path="/" element={<HomePage/>}/>

@@ -10,6 +10,7 @@ function FreeEstimate () {
     const [vehicleMake, setVehicleMake] = useState("");
     const [vehicleModel, setVehicleModel] = useState("");
     const [vehicleYear, setVehicleYear] = useState("");
+    const [userEmail, setUserEmail] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,6 +18,7 @@ function FreeEstimate () {
         //Clear input fields
         setFirstName("");
         setLastName("");
+        setUserEmail("");
         setVehicleMake("");
         setVehicleModel("");
         setVehicleYear("");
@@ -24,6 +26,15 @@ function FreeEstimate () {
         //Close Popup on submit
         setButtonPopup(false);
     };
+
+    function getID() {
+        var nodes = document.forms["estimateInfo"].querySelectorAll("input[type='text']");
+        var array = [].map.call(nodes, function(item) {
+          return {name : item.name, value : item.value};
+        });
+        console.log(array);
+      }
+
     return(
     <section className="FreeEstimate">
         <Button
@@ -33,7 +44,7 @@ function FreeEstimate () {
            Schedule Now
         </Button>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-            <form onSubmit={handleSubmit}>
+            <form id="estimateInfo" onSubmit={handleSubmit}>
                 <h3>Free Estimate</h3>
                 <label>First Name</label>
                 <br />
@@ -51,6 +62,15 @@ function FreeEstimate () {
                         value={lastName}
                         required
                         onChange={(e) => setLastName(e.target.value)}
+                    />
+                <br/>
+                <label>Email</label>
+                <br />
+                    <input
+                        type="text"
+                        value={userEmail}
+                        required
+                        onChange={(e) => setUserEmail(e.target.value)}
                     />
                 <br/>
                 <label>Vehicle Make</label>
