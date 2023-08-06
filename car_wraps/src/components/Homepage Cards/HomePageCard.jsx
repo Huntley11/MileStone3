@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-function HomePageCards({title, image, paragraph}) {
+function HomePageCards({title, imageSrc, paragraph}) {
     return (
         <Card sx={{ maxWidth: "33%" }}>
             <CardMedia
                 component="img"
                 height="140"
-                image={image}
+                image={imageSrc}
                 alt="Card Image"
             />
             <CardContent>
@@ -21,7 +22,10 @@ function HomePageCards({title, image, paragraph}) {
                 <Typography variant="body2" color="text.secondary">
                     {paragraph}
                 </Typography>
-                <Button variant="contained">Learn More</Button>
+                <Link >
+                    <Button variant="contained">Learn More</Button>
+                </Link>
+                
             </CardContent>
         </Card>
     )
