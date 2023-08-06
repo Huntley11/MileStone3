@@ -9,5 +9,5 @@ const cars_schema=new mongoose.Schema({
      
 })
 const cars=mongoose.model('cars',cars_schema)
-models.exports=cars
+module.exports=cars
 
