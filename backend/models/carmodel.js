@@ -1,11 +1,13 @@
 const mongoose=require(`mongoose`)
 
-const {Schema}=mongoose
-
-
-const carSchema= new Schema({
-    name:{type:String,required:true},
-    make:{type:string},
-    modle:{type:string},
-    year:{type:Number},
+const cars_schema=new mongoose.Schema({
+     FirstName:String,
+     LastName:String,
+     VehicleMake:String,
+     VehicleModle:String,
+     Vehicleyear:String,
+     
 })
+const cars=mongoose.model('cars',cars_schema)
+models.exports=cars
+
