@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     padding: 0;
@@ -48,6 +47,61 @@ body, html {
     max-width: 200px;
     margin: 10px;
 }
+
+/* Slideshow CSS */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content (in case images are larger) */
+  }
+  
+  .gallery-slide {
+    display: none;
+  }
+  
+  .gallery-slide.active {
+    display: block;
+  }
+  
+  /* Slideshow Next/Previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center the buttons vertically */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .prev {
+    left: 10px; /* Adjust the position of previous button */
+  }
+  
+  .next {
+    right: 10px; /* Adjust the position of next button */
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Styles for the gallery images */
+  .gallery-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Preserve aspect ratio and cover container */
+  }
 
 /* Styles for the footer */
 footer {

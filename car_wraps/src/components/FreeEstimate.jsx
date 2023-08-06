@@ -25,7 +25,7 @@ function FreeEstimate() {
             userEmail: userEmail,
             vehicleMake: vehicleMake,
             vehicleModel: vehicleModel,
-            vehicleYear: vehicleYear
+            vehicleYear: vehicleYear,
         };
 
         // Send the form data to the backend API endpoint
