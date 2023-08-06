@@ -1,0 +1,58 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the hero section */
+.hero {
+    background-image: url('https://vehiclewraps.vegas/wp-content/uploads/2022/05/purple_flare_personal_vehicle_wrap_main_hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* Styles for the services section */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Styles for the gallery section */
+.gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-images img {
+    max-width: 200px;
+    margin: 10px;
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

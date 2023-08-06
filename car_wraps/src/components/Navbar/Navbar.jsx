@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
-import HomePage from '../HomePage';
-import About from '../About'
-import Login from '../Login';
-import Appointment from '../Appointments';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -14,7 +10,6 @@ function Navbar() {
   };
 
   return (
-    <Router>
       <nav className={`navbar ${showMenu ? 'active' : ''}`}>
         <div className="hamburger" onClick={handleToggleMenu}>
           <div className="line"></div>
@@ -35,21 +30,11 @@ function Navbar() {
           <Link to="/sign-up" onClick={handleToggleMenu}>
             Sign Up
           </Link>
-          <Link to="/signin" onClick={handleToggleMenu}>
-            Log In
+          <Link to="/Login" onClick={handleToggleMenu}>
+            Login
           </Link>
         </div>
       </nav>
-
-      <Routes>
-        <Route path="/" element={<HomePage/>}/>
-        <Route path="/about" element={<About/>} />
-        <Route path="/Appointment" element={<Appointment/>} />
-        {/* <Route path="/sign-up" element={SignUp} /> */}
-        <Route path="/login" element={<Login/>} />
-      </Routes>
-      
-    </Router>
   );
 }
 
