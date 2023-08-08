@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const { isAuthenticated } = useAuth0();
+
+  useEffect(() => {
+    console.log('useEffect triggered:', isAuthenticated);
+  }, [isAuthenticated]);
+  
 
   const handleToggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+  const { loginWithRedirect, logout } = useAuth0();
 
   return (
     <nav className={`navbar ${showMenu ? 'active' : ''}`}>
@@ -33,20 +39,23 @@ function Navbar() {
         <Link to="/Profile" onClick={handleToggleMenu}>
           Profile
         </Link>
-        {!isLoading && !user && (
+        {isAuthenticated ? (
+          // Show the user's profile information if authenticated
+          <div>
+            <button
+              className="btn btn-primary btn-block"
+              onClick={() => logout({ returnTo: window.location.origin })}
+            >
+              Log Out
+            </button>
+          </div>
+        ) : (
+          // Show the login button if not authenticated
           <button
             className="btn btn-primary btn-block"
-            onClick={() => loginWithRedirect()}
+            onClick={() => loginWithRedirect() }
           >
             Log In
-          </button>
-        )}
-        {!isLoading && !user && (
-          <button
-            className="btn btn-primary btn-block"
-            onClick={() => logout({ returnTo: window.location.origin })}
-          >
-            Log Out
           </button>
         )}
       </div>

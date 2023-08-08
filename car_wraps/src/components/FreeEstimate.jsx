@@ -65,7 +65,7 @@ function FreeEstimate() {
                 className="createFreeEstimate"
                 onClick={() => setButtonPopup(true)}
             >
-                Schedule Now
+                Schedule A Free Estimate
             </Button>
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
                 <form id="estimateInfo" onSubmit={handleSubmit}>

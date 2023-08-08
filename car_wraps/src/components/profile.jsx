@@ -1,10 +1,12 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Profile = () => {
     const { user } = useAuth0();
     const { name, picture, email } = user;
-    
+
     return (
         <div>
             <div className="row align-items-center profileheader">
@@ -18,11 +20,6 @@ const Profile = () => {
                 <div className="col-md text-center text-md-left">
                     <h2>{name}</h2>
                     <p className="lead text-muted">{email}</p>
-                </div>
-                <div className="row">
-                    <pre className="col-12 text-light bg-dark p-4">
-                        {JSON.stringify(user, null, 2)}
-                    </pre>
                 </div>
             </div>
         </div>
