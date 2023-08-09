@@ -8,7 +8,7 @@ import CarWraps from './components/CarWraps/carWraps';
 import Detailing from './components/Detailing/detailing';
 import DentRepair from './components/DentRepair/dentRepair';
 import Auth0ProviderWithHistory from './auth0Provider';
-import Profile from './components/profile';
+import Profile from './components/Profile/profile';
 
 
 
