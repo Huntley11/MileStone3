@@ -7,7 +7,7 @@ import Appointment from './components/Appointments';
 import CarWraps from './components/CarWraps/carWraps';
 import Detailing from './components/Detailing/detailing';
 import DentRepair from './components/DentRepair/dentRepair';
-import Auth0ProviderWithHistory from './auth0Provider';
+import Auth0ProviderWithNavigate from './auth0Provider'
 import Profile from './components/Profile/profile';
 
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <Router>
-        <Auth0ProviderWithHistory>
+        <Auth0ProviderWithNavigate>
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage/>}/>
@@ -31,7 +31,7 @@ function App() {
             <Route path="/DentRepair" element={<DentRepair/>}/>
             <Route path="/Profile" element={<Profile/>}/>
           </Routes>
-        </Auth0ProviderWithHistory>
+        </Auth0ProviderWithNavigate>
       </Router>
       
     </>
