@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   useEffect(() => {
     console.log('useEffect triggered:', isAuthenticated);
@@ -15,8 +15,6 @@ function Navbar() {
   const handleToggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
-  const { loginWithRedirect, logout } = useAuth0();
 
   return (
     <nav className={`navbar ${showMenu ? 'active' : ''}`}>

@@ -5,6 +5,7 @@ import "./profile.css"
 
 const Profile = () => {
     const { user, isAuthenticated } = useAuth0();
+    console.log(user, isAuthenticated)
 
     if (!isAuthenticated) {
         return <h1>Log in to see user information</h1>;
